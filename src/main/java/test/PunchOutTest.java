@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import page.DashboardPage;
 import page.LoginPage;
+import reporting.MyLogger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -40,6 +41,6 @@ public class PunchOutTest {
   @AfterClass(description = "Close browser")
   public void closeBrowser() {
     DriverSingleton.getDriver().quit();
-    System.out.println("DriverSingleton is closed");
+    MyLogger.log("DriverSingleton is closed");
   }
 }

@@ -1,5 +1,7 @@
 package config;
 
+import reporting.MyLogger;
+
 public enum BrowserType {
   CHROME("chrome"),
   FIREFOX("firefox");
@@ -27,7 +29,7 @@ public enum BrowserType {
         }
       }
     }
-    System.out.println("Can't convert string to browser type");
+    MyLogger.info("Can't convert string to browser type");
     return null;
   }
 }

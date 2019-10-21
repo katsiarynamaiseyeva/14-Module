@@ -6,6 +6,7 @@ import listener.Listener;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
 import page.DirectUrl;
+import reporting.MyLogger;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +18,7 @@ public class Runner {
 
   public static void main(String[] args) {
     String browserType = args[1];
-    String env = args[5];
+    String env = args[1];
     String xmlSuiteName = "src/main/resources/testng_regression.xml";
 
     Properties property = new Properties();
@@ -48,7 +49,7 @@ public class Runner {
     testNG.setXmlSuites(suites);
 
     testNG.addListener(new Listener());
-    System.out.println(
+    MyLogger.info(
         "Run with parameters: browser "
             + browserType
             + ", selenium server url "

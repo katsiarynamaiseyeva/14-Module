@@ -4,6 +4,7 @@ import core.CustomWebDriver;
 import core.DriverSingleton;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import reporting.MyLogger;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,9 +20,9 @@ public class Screenshoter {
       String screenshotName = SCREENSHOTS_NAME_TPL + System.nanoTime() + ".png";
       File copy = new File(screenshotName);
       FileUtils.copyFile(screenshot, copy);
-      System.out.println("Saved screenshot: " + screenshotName);
+      MyLogger.info("Saved screenshot: " + screenshotName);
     } catch (IOException e) {
-      System.out.println("Failed to make screenshot");
+      MyLogger.info("Failed to make screenshot");
     }
   }
 }
