@@ -5,7 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import reporting.MyLogger;
+import reporting.Log;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,7 +38,7 @@ public class DriverSingleton {
           webDriver =
               new CustomWebDriver(new RemoteWebDriver(new URL(seleniumServerUrl), capabilities));
         } catch (MalformedURLException e) {
-          MyLogger.debug("Can't connect to remote WebDriver with capabilities " + capabilities);
+          Log.debug("Can't connect to remote WebDriver with capabilities " + capabilities);
         }
         break;
       case FIREFOX:
@@ -49,7 +49,7 @@ public class DriverSingleton {
           webDriver =
               new CustomWebDriver(new RemoteWebDriver(new URL(seleniumServerUrl), capabilities));
         } catch (MalformedURLException e) {
-          MyLogger.debug("Can't connect to remote WebDriver with capabilities " + capabilities);
+          Log.debug("Can't connect to remote WebDriver with capabilities " + capabilities);
         }
         break;
     }

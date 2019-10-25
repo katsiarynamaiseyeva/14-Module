@@ -6,7 +6,7 @@ import listener.Listener;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
 import page.DirectUrl;
-import reporting.MyLogger;
+import reporting.Log;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -49,7 +49,7 @@ public class Runner {
     testNG.setXmlSuites(suites);
 
     testNG.addListener(new Listener());
-    MyLogger.info(
+    Log.info(
         "Run with parameters: browser "
             + browserType
             + ", selenium server url "

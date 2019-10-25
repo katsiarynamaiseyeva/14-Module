@@ -1,6 +1,6 @@
 package config;
 
-import reporting.MyLogger;
+import reporting.Log;
 
 public enum BrowserType {
   CHROME("chrome"),
@@ -29,7 +29,7 @@ public enum BrowserType {
         }
       }
     }
-    MyLogger.info("Can't convert string to browser type");
+    Log.info("Can't convert string to browser type");
     return null;
   }
 }

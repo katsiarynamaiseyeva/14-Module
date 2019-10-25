@@ -1,19 +1,23 @@
 package test;
 
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import core.DriverSingleton;
 import element.ConfirmationPopup;
+import listener.Listener;
 import model.EmployeeModel;
 import model.UserFactory;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import page.DashboardPage;
 import page.LoginPage;
-import reporting.MyLogger;
+import reporting.Log;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+@Listeners({ReportPortalTestNGListener.class, Listener.class})
 public class PunchOutTest {
 
   @Test(description = "Punch out test")
@@ -41,6 +45,6 @@ public class PunchOutTest {
   @AfterClass(description = "Close browser")
   public void closeBrowser() {
     DriverSingleton.getDriver().quit();
-    MyLogger.log("DriverSingleton is closed");
+    Log.log("DriverSingleton is closed");
   }
 }

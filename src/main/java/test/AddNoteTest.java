@@ -12,7 +12,7 @@ import page.HamburgerMenu;
 import page.LoginPage;
 import page.OtherFormsOpenTabPage;
 import page.OtherFormsPage;
-import reporting.MyLogger;
+import reporting.Log;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -58,6 +58,6 @@ public class AddNoteTest {
   @AfterClass(description = "Close browser")
   public void closeBrowser() {
     DriverSingleton.getDriver().quit();
-    MyLogger.log("DriverSingleton is closed");
+    Log.log("DriverSingleton is closed");
   }
 }

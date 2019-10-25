@@ -33,16 +33,17 @@
                             <name>listener</name>
                             <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
                         </property>
-                        <property>
-                            <name>listener</name>
-                            <value>listener.Listener</value>
-                        </property>
+<!--                       <property>-->
+<!--                            <name>listener</name>-->
+<!--                            <value>listener.Listener</value>-->
+<!--                        </property>-->
                     </properties>
+
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/main/resources/testng.xml
+                      <suiteXmlFile>src/main/resources/testng_regression.xml
                         </suiteXmlFile>
-                        <suiteXmlFile>src/main/resources/testng_smoke.xml
-                        </suiteXmlFile>
+<!--                        <suiteXmlFile>src/main/resources/testng_smoke.xml-->
+<!--                        </suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -136,13 +137,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>4.3.6.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.3</version>
@@ -199,7 +193,7 @@
             <version>4.0.1</version>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>logger-java-logback</artifactId>
             <version>4.0.0</version>
@@ -210,7 +204,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
-
+-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>

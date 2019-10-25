@@ -3,9 +3,9 @@ package reporting;
 
 import org.apache.log4j.Logger;
 
-public class MyLogger {
+public class Log {
 
-    public static Logger logger = Logger.getLogger(MyLogger.class);
+    public static Logger logger = Logger.getLogger(Log.class);
 
     public static void error(String message) {
         logger.error(message);
@@ -19,9 +19,18 @@ public class MyLogger {
         logger.info(message);
     }
 
+    public static void info(Object obj) {
+        logger.info(obj);
+    }
+
     public static void debug(String message) {
         logger.debug(message);
     }
+
+    public static void debug(Object obj) {
+        logger.debug(obj);
+    }
+
 
     public static void warn(String message) {
         logger.warn(message);
@@ -34,4 +43,5 @@ public class MyLogger {
     public static void log(String message){
         logger.info(message);
     }
+
 }
